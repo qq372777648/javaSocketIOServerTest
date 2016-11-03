@@ -20,7 +20,8 @@ public class MessageListener implements DataListener<String> {
 //		Packet ptn=new Packet(PacketType.MESSAGE);
 //		ptn.setData("sadf");
 //		client.send(ptn);
-		client.sendEvent("message", "success");
+		client.sendEvent("message", "success");//µ•”√ªß
+		
 		
 	}
 

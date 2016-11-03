@@ -32,13 +32,26 @@ public class SocketIOServerTest {
 			}
 		});
 		
-
+		//单机
 		MessageListener messageListener = new MessageListener();
 		server.addEventListener("message", String.class, messageListener);
 
+		//广播
 		MessageListener2 messageListener2 = new MessageListener2();
 		messageListener2.setServer(server);
 		server.addEventListener("message2", String.class, messageListener2);
+		
+		
+		//客户列表
+		MessageListener3 messageListener3 = new MessageListener3();
+		messageListener3.setServer(server);
+		server.addEventListener("message3", String.class, messageListener3);
+		
+		//对话
+		MessageListener4 messageListener4 = new MessageListener4();
+		messageListener4.setServer(server);
+		server.addEventListener("message4", String.class, messageListener4);
+		
 
 		// 启动服务
 		server.start();
